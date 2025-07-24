@@ -1,0 +1,502 @@
+body {
+  margin: 0;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+/* ヒーロー背景だけに画像をつける */
+.hero-bg {
+  background-image: url('../img/バレエback.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 中央テキスト */
+.hero-text {
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  text-shadow: 2px 2px 6px black;
+}
+
+.hero-text h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  text-shadow: 2px 2px 6px black;
+}
+
+/* ヘッダー */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 20px;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-sizing: border-box;
+  background-color: white;
+  backdrop-filter: blur(4px);
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  padding: 4px 0;
+}
+
+/* ハンバーガーメニュー */
+.drawer_hidden {
+  display: none;
+}
+
+.drawer_open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 101;
+  margin-left: auto;
+  position: relative;
+}
+
+.drawer_open .bar {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: red;
+  border-radius: 2px;
+  transition: 0.3s ease;
+  transform-origin: center;
+  position: absolute;
+  left: 0;
+}
+
+.drawer_open .bar:nth-child(1) {
+  top: 0;
+}
+.drawer_open .bar:nth-child(2) {
+  top: 10px;
+}
+.drawer_open .bar:nth-child(3) {
+  top: 20px;
+}
+
+/* クリック時のバツ */
+#drawer_input:checked + .drawer_open .bar:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+#drawer_input:checked + .drawer_open .bar:nth-child(2) {
+  opacity: 0;
+}
+#drawer_input:checked + .drawer_open .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+
+
+.nav_content {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  transition: left 0.3s ease;
+  z-index: 100;
+}
+#drawer_input:checked ~ .nav_content {
+  left: 0;
+}
+.nav_list {
+  list-style: none;
+  padding: 80px 20px;
+}
+.nav_item {
+  margin-bottom: 20px;
+}
+.nav_item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* スライドショー */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 500px; /* 高さを調整して、画像が切れないように */
+  overflow: hidden;
+  background-color: black;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ← ここを変更 */
+  opacity: 0;
+  transition: opacity 1s ease;
+  background-color: black; /* 背景色を追加すると余白が目立たない */
+}
+
+
+.slide.active {
+  opacity: 1;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 48px;
+  }
+  .hero-text h2 {
+    font-size: 30px;
+    padding: 0 20px;
+  }
+}
+.studio-info, .instructor {
+  padding: 40px 20px;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+.studio-info h2, .instructor h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+
+.studio-info p, .instructor p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.section-title {
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.instructor-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.instructor-image img {
+  width: 250px; /* サイズはお好みで */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.instructor-profile {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.awards {
+  margin-top: 30px;
+}
+
+.awards h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #b22222;
+}
+
+.awards ul {
+  list-style-type: "🎖️ ";
+  padding-left: 20px;
+}
+
+.awards ul li {
+  margin-bottom: 8px;
+}
+
+.schedule {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff8f0;
+}
+
+.schedule-title {
+  font-size: 36px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  color: #5c3a2f;
+}
+
+.schedule-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 16px;
+  background: white;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #d8cfc4;
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.schedule-table th {
+  background-color: #f0e6dc;
+  font-weight: bold;
+}
+
+.note {
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+  color: #555;
+}
+
+.small {
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+  color: #a95f5f;
+}
+
+.ts-note {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #444;
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px 60px;
+  background-color: #f9f9f9;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.contact-info p {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.contact-map {
+  position: relative;
+}
+
+.contact-map iframe {
+  border: none;
+  width: 100%;
+  height: 250px;
+}
+
+.qr-code-overlay {
+  display: flex;
+  justify-content: center;  /* 中央寄せ */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+.qr-box {
+  margin-bottom: 10px;
+}
+
+.qr-box img {
+  width: 80px;
+  height: auto;
+}
+
+.qr-box p {
+  font-size: 12px;
+  margin: 5px 0 0;
+}
+
+.contact-map iframe {
+  border: none;
+  width: 100%;
+  height: 250px;
+}
+
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+.contact-section {
+    flex-direction: column;
+     align-items: center;
+  }
+}
+.contact-info, .contact-map {
+    padding: 10px 0;
+  }
+
+
+.price-section .section-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.price-table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.price-table th {
+  background-color: #f8dce2; /* 見やすくするための色 */
+}
+
+@media (max-width: 768px) {
+  .price-table th,
+  .price-table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+.trial-info {
+  font-size: 18px;
+  background: #ffeef2;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.trial-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #b3004b;
+}
+
+.trial-info p {
+  margin: 6px 0;
+}
+
+.trial-info .campaign {
+  color: #d40055;
+  font-weight: bold;
+}
+
+
+
+.price-section {
+  padding: 40px 20px;
+  background-color: #fff5f7;
+  text-align: center;
+}
+
+.price-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+ 
+
+@media (max-width: 768px) {
+  .price-section {
+    padding: 20px 10px;
+    background-color: #fff0f5;
+    text-align: center;
+  }
+}
+  .price-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .trial-info {
+    width: 100%;
+    font-size: 16px;
+  }
+
+
+
+
+@media (max-width: 768px) {
+  .price-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+  }
+}
+/* ===== brand icon (footer logo) ===== */
+.brand-icon {
+  margin: 40px 0;
+  text-align: center;        /* 中央寄せ（inline要素に効く） */
+  display: block;            /* 念のため */
+}
+
+.brand-icon img {
+  width:100px;
+  height:auto;
+}
+
+
+
+/* スマホでは少し小さく */
+@media (max-width: 768px) {
+  .brand-icon img {
+    width: 80px;
+  }
+}
+
+
+
+
+
+
