@@ -5,7 +5,7 @@ body {
 
 /* ヒーロー背景だけに画像をつける */
 .hero-bg {
-  background-image: url('../img/バレエback.jpg');
+  background-image: url('../img/ballet-back.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
