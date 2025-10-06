@@ -495,6 +495,39 @@ body {
   }
 }
 
+.icon-list {
+  display: flex;
+  justify-content: center; /* 中央揃え */
+  gap: 15px;               /* アイコンの間隔 */
+  margin-top: 10px;        /* 地図との間隔 */
+}
+
+.icon-list img {
+  width: 40px;
+  height: 40px;
+}
+
+
+
+
+/* --- スマホ用調整 --- */
+@media screen and (max-width: 768px) {
+  .icon-list {
+    bottom: 15px;
+    right: 15px;
+    gap: 10px;           /* アイコン間隔を少し狭める */
+  }
+
+  .icon-list img {
+    width: 35px;         /* アイコンサイズを小さめに */
+  }
+}
+
+
+
+
+
+
 
 
 
