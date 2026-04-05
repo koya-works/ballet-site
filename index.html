@@ -13,8 +13,8 @@
   <!-- ヘッダー（セクションの外） -->
   <header class="header">
     <div class="logo">
-      <img src="img/petitpoint_black.png" alt="Petit Point ロゴ" />
-    </div>
+      <!-- <img src="img/2026-child.jpg" alt="Petit Point ロゴ" /> -->
+      
 
     <!-- ハンバーガーメニュー -->
     <input type="checkbox" id="drawer_input" class="drawer_hidden" />
@@ -38,16 +38,22 @@
         <!-- トップセクション -->
   　 <section id="top">
       <div class="hero-bg">
+        <!--
         <div class="hero-text">
           <h1>Petit Point</h1>
           <h2>Ballet Studio</h2>
         </div>
-      </div>
+      -->
     </section>
   
     <!-- 講師紹介 -->
 <section class="instructor">
-  <h2 class="section-title">講師紹介 - 石黒 優花</h2>
+  <h2 class="section-title">
+    <span class="profile-text">Profile</span> - <span class="name-text">石黒 優花</span>
+  </h2>
+</section>
+
+
   <!-- 講師写真を追加 -->
   <div class="instructor-image">
     <img src="img/ballet-7.png" alt="石黒優花 講師の写真">
@@ -73,10 +79,9 @@
       </ul>
     </div>
   </div>
-</section>
 
 
-  　<section id="gallery">
+　　<section id="gallery" class="fade-in">
   　　<h2>gallery</h2>
   
     <!-- スライドショー -->
@@ -100,11 +105,11 @@
     <thead>
       <tr>
         <th>クラス</th>
-        <th>MONDAY</th>
-        <th>TUESDAY</th>
-        <th>WEDNESDAY</th>
-        <th>THURSDAY</th>
-        <th>SATURDAY</th>
+        <th>月</th>
+        <th>火</th>
+        <th>水</th>
+        <th>木</th>
+        <th>土</th>
       </tr>
     </thead>
     <tbody>
@@ -126,11 +131,11 @@
       </tr>
       <tr>
         <td>B class<br><span class="note">（小学生学年〜）</span></td>
-        <td>17:10〜18:10</td>
+        <td>17:00〜18:10</td>
         <td></td>
-        <td>17:10〜18:10</td>
-        <td>16:30〜17:30</td>
-        <td>15:00〜16:20</td>
+        <td>17:00〜18:10</td>
+        <td>16:20〜17:30</td>
+        <td>15:00〜16:20<br><span class="small">(要許可制)</span></td>
       </tr>
       <tr>
         <td>A class<br><span class="note">（中学生〜）</span></td>
@@ -138,31 +143,34 @@
         <td>19:30〜20:50</td>
         <td>18:20〜19:40</td>
         <td></td>
-        <td>15:00〜16:20</td>
+        <td>15:00〜16:20<br>
+          <span class="small">(トウシューズクラス)</span></td>
       </tr>
       <tr>
-        <td>大人 class（初級）</td>
+        <td>大人 class
+           <span class="note">（初級）</span></td>
         <td>10:00〜11:10<br><span class="small">＊(11:15〜11:35)</span></td>
         <td></td>
+        <td><span class="small">第1・第3週目</span><br>20:00〜21:10<br><span class="small">＊(21:15〜21:35)</span></td>
         <td></td>
-        <td>20:00〜21:10<br><span class="small">＊(21:15〜21:35)</span></td>
         <td></td>
       </tr>
       <tr>
-        <td>大人 class（中級）</td>
+        <td>大人 class
+          <span class="note">（初級）</span></td>
+        <td></td>
         <td></td>
         <td>10:00〜11:10<br><span class="small">＊(11:15〜11:35)</span></td>
         <td></td>
-        <td></td>
-        <td>16:40〜17:50<br><span class="small">＊(17:50〜18:10)</span></td>
+        <td><span class="small">第2・第4週目</span><br>16:40〜17:50</td>
       </tr>
       <tr>
-        <td>Va/パーソナル</td>
+        <td>Va/コンクール</td>
         <td>20:00〜</td>
+        <td>21:00〜</td>
+        <td><span class="small">第2・第4週目</span><br>19:45〜</td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><span class="small">第1・第3週目</span><br>16:30〜17:50</td>
       </tr>
     </tbody>
   </table>
@@ -222,6 +230,46 @@
   </div>
 </section>
 
+<!-- ブログ -->
+<section class="blog">
+  <h2 class="section-title">ブログ</h2>
+
+  <div class="blog-item">
+    <h3>スタジオがオープンしました！</h3>
+    <p>生徒さん達も少しづつ増えてきました。</p>
+  </div>
+
+  <div class="blog-item">
+    <h3>春、何かを始める季節</h3>
+    <p>見学・体験　
+      随時受付中です。</p>
+  </div>
+
+  
+</section>
+<!-- Giscus コメント欄（テンプレート） -->
+ <!-- Giscus コメント欄 -->
+<div id="giscus-container">
+  <script src="https://giscus.app/client.js"
+          data-repo="koya-works/ballet-site"
+          data-repo-id="R_kgDOLhZfJw"
+          data-category="General"
+          data-category-id="DIC_kwDOLhZfJ84CfZ5V"
+          data-mapping="pathname"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="light"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <noscript>コメントを表示するにはJavaScriptを有効にしてください。</noscript>
+</div>
+
+
+
+
+
 <!-- お問い合わせ -->
 <section id="contact" class="contact-section">
   <div class="contact-info">
@@ -243,6 +291,7 @@
       style="border:0;" 
       allowfullscreen="" 
       loading="lazy">
+      referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </div>
  <div class="icon-list">
@@ -269,9 +318,8 @@
       slides[index].classList.add("active");
     }, 3000);
   </script>
-  <!--test-->
   <script src="index.js"></script>
-　<script src="https://giscus.app/client.js"
+  <script src="https://giscus.app/client.js"
   data-repo="koya-works/ballet-site"
   data-repo-id="1025402351"
   data-category="General"
@@ -284,6 +332,15 @@
   async>
 </script>
 
-  
+
 </body>
 </html>
+
+
+ 
+
+  
+
+ 
+   
+       
