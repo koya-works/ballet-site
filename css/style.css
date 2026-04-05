@@ -5,14 +5,12 @@ body {
 
 /* ヒーロー背景だけに画像をつける */
 .hero-bg {
-  background-image: url('../img/ballet-back.jpg');
+  background-image: url("../img/2026-child.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
+
 
 /* 中央テキスト */
 .hero-text {
@@ -50,11 +48,12 @@ body {
 }
 
 .logo img {
-  width: 200px;
-  height: auto;
+  height: 48px;   /* ← これが重要 */
+  width: auto;
   object-fit: contain;
-  padding: 4px 0;
 }
+
+
 
 /* ハンバーガーメニュー */
 .drawer_hidden {
@@ -189,12 +188,25 @@ body {
 }
 
 .section-title {
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
-  font-family: 'Playfair Display', serif;
   margin-bottom: 20px;
-  color: #333;
 }
+
+.profile-text {
+  font-family: 'Times New Roman', serif;
+  color: #e6a5c3; /* 柔らかいピンク */
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.name-text {
+  color: #333; /* こちらはそのまま落ち着いた色 */
+  font-weight: 600;
+}
+
+
+
 
 .instructor-image {
   text-align: center;
@@ -261,6 +273,7 @@ body {
   border-collapse: collapse;
   font-size: 16px;
   background: white;
+  table-layout: fixed; /* 追加 */
 }
 
 .schedule-table th,
@@ -268,6 +281,8 @@ body {
   border: 1px solid #d8cfc4;
   padding: 12px;
   vertical-align: middle;
+  text-align: center;   /* 追加 */
+  white-space: nowrap;  /* 追加 */
 }
 
 .schedule-table th {
@@ -284,7 +299,6 @@ body {
 
 .small {
   font-size: 12px;
-  display: block;
   margin-top: 4px;
   color: #a95f5f;
 }
@@ -522,6 +536,52 @@ body {
     width: 35px;         /* アイコンサイズを小さめに */
   }
 }
+
+body {
+  background-color: #ffe6eb; /* 柔らかいピンク */
+  color: #333; /* 文字が見やすいように */
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.hero-bg {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+
+  .schedule-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
