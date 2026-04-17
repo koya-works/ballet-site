@@ -573,19 +573,15 @@ body {
 
 }
 
+.blog-item {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: left;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.blog {
+  padding: 40px 20px;
+}
 
 
 
