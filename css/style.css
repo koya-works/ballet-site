@@ -155,6 +155,11 @@ body {
 }
 
 
+.slide:first-child{
+  opacity: 1
+  ;
+}
+
 .slide.active {
   opacity: 1;
 }
@@ -582,10 +587,3 @@ body {
 .blog {
   padding: 40px 20px;
 }
-
-
-
-
-
-
-
