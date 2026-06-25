@@ -587,3 +587,8 @@ body {
 .blog {
   padding: 40px 20px;
 }
+
+.seo-title {
+  position: absolute;
+  left: -9999px;
+}
