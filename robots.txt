@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://koya-works.github.io/ballet-site/sitemap.xml
